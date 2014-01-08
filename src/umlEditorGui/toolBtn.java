@@ -9,23 +9,24 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 import main.UMLCanvas;
-import umlMode.AssoMode;
 import umlMode.UMLMode;
 
 public class toolBtn extends JButton {
 	private UMLMode mode;
-	private UMLCanvas canvas;
+	private UMLCanvas canvas = UMLCanvas.getInstance();
 	
-	public toolBtn(ImageIcon imageIcon,  final UMLMode mode, final UMLCanvas canvas){
+	public toolBtn(ImageIcon imageIcon, UMLMode mode){
 		this.mode = mode;
-		this.canvas = canvas;
 		this.setIcon(imageIcon);
 		
 		this.addActionListener(new ActionListener(){
+			private UMLMode mode;
+			private UMLCanvas canvas = UMLCanvas.getInstance();
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+				mode = toolBtn.this.mode;
 				canvas.setMode(mode);
-//				setAllToWhite();
+				ToolBar.getInstance().setAllToWhite();
 				setBorder(BorderFactory.createLineBorder(Color.black, 3));
 			}
 	     });

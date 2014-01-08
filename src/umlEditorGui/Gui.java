@@ -26,14 +26,14 @@ public class Gui extends JFrame {
 
     public final void initUI() {
         
-        UMLCanvas canvas = new UMLCanvas();
+        UMLCanvas canvas = UMLCanvas.getInstance();
         canvas.setPreferredSize(new Dimension(650, 0));
         canvas.setBorder(BorderFactory.createLineBorder (Color.blue, 2));
         canvas.setBackground(Color.white);
         add(canvas, BorderLayout.EAST);
         
         //Add tool bar to JFrame
-        ToolBar toolbar = new ToolBar(canvas);
+        ToolBar toolbar = ToolBar.getInstance();
         add(toolbar, BorderLayout.WEST);
         
         MenuBar menuBar = new MenuBar(canvas);

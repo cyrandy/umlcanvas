@@ -25,17 +25,24 @@ public class ToolBar extends JToolBar {
 	private JButton assoBtn;
 	private JButton generBtn; 
 	private JButton compoBtn;
-	private UMLCanvas canvas;
+	private static UMLCanvas canvas = UMLCanvas.getInstance();
+	private static ToolBar instance = null;
 	
-	public ToolBar(UMLCanvas canvas) {
-		this.canvas = canvas;
+	public static ToolBar getInstance(){
+		if (instance == null) {
+			instance = new ToolBar();
+		}
+		return instance;
+	}
+	
+	private ToolBar() {
 		// TODO Auto-generated constructor stub
-		selectBtn = new toolBtn(new ImageIcon("icon/1.png"), new SelectMode(canvas), canvas);
-		classBtn = new toolBtn(new ImageIcon("icon/5.png"),new ClassObjMode(canvas), canvas);
-		useCaseBtn = new toolBtn(new ImageIcon("icon/6.png"), new UseCaseMode(canvas), canvas);
-		assoBtn = new toolBtn(new ImageIcon("icon/2.png"), new AssoMode(canvas), canvas);
-		generBtn = new toolBtn(new ImageIcon("icon/3.png"), new GenerMode(canvas), canvas);
-		compoBtn = new toolBtn(new ImageIcon("icon/4.png"), new CompoMode(canvas), canvas);
+		selectBtn = new toolBtn(new ImageIcon("icon/1.png"), new SelectMode(canvas));
+		classBtn = new toolBtn(new ImageIcon("icon/5.png"),new ClassObjMode(canvas));
+		useCaseBtn = new toolBtn(new ImageIcon("icon/6.png"), new UseCaseMode(canvas));
+		assoBtn = new toolBtn(new ImageIcon("icon/2.png"), new AssoMode(canvas));
+		generBtn = new toolBtn(new ImageIcon("icon/3.png"), new GenerMode(canvas));
+		compoBtn = new toolBtn(new ImageIcon("icon/4.png"), new CompoMode(canvas));
 		
 		setAllToWhite();
 		

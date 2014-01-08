@@ -17,11 +17,19 @@ import umlMode.UMLMode;
 
 
 public class UMLCanvas extends JPanel implements MouseListener, MouseMotionListener {
+	private static UMLCanvas instance = null;
 	private UMLMode currentMode;
 //	private UMLMouseListener mouseListener;
 	private ArrayList<UMLObject> objList = new ArrayList<UMLObject>();
 	
-	public UMLCanvas() {
+	public static UMLCanvas getInstance(){
+		if(instance == null) {
+			instance = new UMLCanvas();
+		}
+		return instance;
+	}
+	
+	private UMLCanvas() {
 		// TODO Auto-generated constructor stub
 		currentMode = new UMLMode(this);
 		addMouseMotionListener(this);
