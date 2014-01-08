@@ -15,7 +15,6 @@ import umlMode.GenerMode;
 import umlMode.SelectMode;
 import umlMode.UMLMode;
 import umlMode.UseCaseMode;
-import main.UMLCanvas;
 
 
 public class ToolBar extends JToolBar {

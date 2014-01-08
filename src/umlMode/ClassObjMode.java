@@ -2,8 +2,8 @@ package umlMode;
 
 import java.awt.event.MouseEvent;
 
-import main.UMLCanvas;
 import shape.ClassObj;
+import umlEditorGui.UMLCanvas;
 
 
 public class ClassObjMode extends UMLMode {

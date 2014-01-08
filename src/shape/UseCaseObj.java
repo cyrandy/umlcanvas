@@ -4,8 +4,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 
+import umlEditorGui.UMLCanvas;
 import main.Main;
-import main.UMLCanvas;
 
 
 public class UseCaseObj implements BasicObj {

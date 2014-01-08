@@ -5,7 +5,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-import main.UMLCanvas;
+import umlEditorGui.UMLCanvas;
 
 
 public class UMLMode implements MouseMotionListener, MouseListener{

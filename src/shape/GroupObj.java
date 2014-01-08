@@ -4,8 +4,8 @@ import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
 
+import umlEditorGui.UMLCanvas;
 import main.Main;
-import main.UMLCanvas;
 
 public class GroupObj implements BasicObj {
 	

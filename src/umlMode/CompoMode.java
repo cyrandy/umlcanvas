@@ -3,9 +3,9 @@ package umlMode;
 
 import java.awt.event.MouseEvent;
 
-import main.UMLCanvas;
 import shape.CompoLine;
 import shape.UMLObject;
+import umlEditorGui.UMLCanvas;
 
 
 public class CompoMode extends UMLMode {

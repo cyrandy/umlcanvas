@@ -4,8 +4,8 @@ package umlMode;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
-import main.UMLCanvas;
 import shape.UMLObject;
+import umlEditorGui.UMLCanvas;
 
 
 public class SelectMode extends UMLMode {

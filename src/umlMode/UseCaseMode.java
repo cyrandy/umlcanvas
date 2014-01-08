@@ -3,8 +3,8 @@ package umlMode;
 
 import java.awt.event.MouseEvent;
 
-import main.UMLCanvas;
 import shape.UseCaseObj;
+import umlEditorGui.UMLCanvas;
 
 
 public class UseCaseMode extends UMLMode {

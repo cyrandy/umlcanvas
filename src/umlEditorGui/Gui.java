@@ -16,8 +16,6 @@ import javax.swing.JPanel;
 import javax.swing.JToolBar;
 import javax.swing.SwingUtilities;
 
-import main.UMLCanvas;
-
 public class Gui extends JFrame {
 
     public Gui() {

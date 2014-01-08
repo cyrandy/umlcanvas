@@ -8,7 +8,6 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-import main.UMLCanvas;
 import umlMode.UMLMode;
 
 public class toolBtn extends JButton {

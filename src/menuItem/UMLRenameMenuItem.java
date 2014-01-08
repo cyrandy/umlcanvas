@@ -5,8 +5,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
-import main.UMLCanvas;
 import shape.UMLObject;
+import umlEditorGui.UMLCanvas;
 
 public class UMLRenameMenuItem extends JMenuItem {
 	private UMLCanvas umlCanvas = UMLCanvas.getInstance();

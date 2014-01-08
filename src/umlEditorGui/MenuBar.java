@@ -6,7 +6,6 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-import main.UMLCanvas;
 import menuItem.UMLGroupMenuItem;
 import menuItem.UMLRenameMenuItem;
 import menuItem.UMLUnGroupMenuItem;

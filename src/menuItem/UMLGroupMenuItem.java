@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 import javax.swing.JMenuItem;
 
-import main.UMLCanvas;
 import shape.GroupObj;
 import shape.UMLObject;
+import umlEditorGui.UMLCanvas;
 
 
 public class UMLGroupMenuItem extends JMenuItem {
