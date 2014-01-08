@@ -20,13 +20,11 @@ public class UMLUnGroupMenuItem extends JMenuItem {
 			public void actionPerformed(ActionEvent e) {
 				int i=0;
 				UMLObject tmpRemoveObj=null;
-				if(umlCanvas.getMode() == "SelectMode") {
-					for(i=umlCanvas.getObjList().size()-1 ; i >= 0 ; i--) {
-						// to be modify - composite design pattern
-						if(umlCanvas.getObjList().get(i).isSelected() && umlCanvas.getObjList().get(i).getClass().getName() == "GroupObj") {
-							tmpRemoveObj = umlCanvas.getObjList().get(i);
-							break;
-						}
+				for(i=umlCanvas.getObjList().size()-1 ; i >= 0 ; i--) {
+					// to be modify - composite design pattern
+					if(umlCanvas.getObjList().get(i).isSelected() && umlCanvas.getObjList().get(i).getClass().getName() == "shape.GroupObj") {
+						tmpRemoveObj = umlCanvas.getObjList().get(i);
+						break;
 					}
 				}
 				umlCanvas.getObjList().remove(tmpRemoveObj);				
