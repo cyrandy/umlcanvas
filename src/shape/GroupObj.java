@@ -186,7 +186,10 @@ public class GroupObj extends UMLObject {
 		// TODO Auto-generated method stub
 		return ObjectList;
 	}
-
 	
+	@Override
+	public void unGroup(){
+		canvas.unGroup(this);
+	}
 
 }

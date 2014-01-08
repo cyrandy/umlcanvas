@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
+import shape.GroupObj;
 import shape.UMLObject;
 import umlMode.SelectMode;
 import umlMode.UMLMode;
@@ -108,5 +109,10 @@ public class UMLCanvas extends JPanel implements MouseListener, MouseMotionListe
 	public void mouseMoved(MouseEvent e) {
 		// TODO Auto-generated method stub
 		if(currentMode != null)	currentMode.mouseMoved(e);
+	}
+
+	public void unGroup(GroupObj groupObj) {
+		// TODO Auto-generated method stub
+		objList.remove(groupObj);
 	}
 }

@@ -22,12 +22,12 @@ public class UMLUnGroupMenuItem extends JMenuItem {
 				UMLObject tmpRemoveObj=null;
 				for(i=umlCanvas.getObjList().size()-1 ; i >= 0 ; i--) {
 					// to be modify - composite design pattern
-					if(umlCanvas.getObjList().get(i).isSelected() && umlCanvas.getObjList().get(i).getClass().getName() == "shape.GroupObj") {
+					if(umlCanvas.getObjList().get(i).isSelected()) {
 						tmpRemoveObj = umlCanvas.getObjList().get(i);
+						tmpRemoveObj.unGroup();
 						break;
 					}
 				}
-				umlCanvas.getObjList().remove(tmpRemoveObj);				
 			}
 		});
 	}
