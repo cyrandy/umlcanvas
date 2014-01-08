@@ -14,8 +14,8 @@ public class AssoMode extends UMLMode {
 	private boolean isFromObj = false ;
 	private boolean isToObj = false;
 	
-	public AssoMode(UMLCanvas canvas) {
-		super(canvas);
+	public AssoMode() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 	@Override

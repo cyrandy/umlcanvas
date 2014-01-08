@@ -10,10 +10,9 @@ import shape.UMLObject;
 
 
 public class UMLUnGroupMenuItem extends JMenuItem {
-	private UMLCanvas umlCanvas;
+	private UMLCanvas umlCanvas = UMLCanvas.getInstance();
 	
-	public UMLUnGroupMenuItem(UMLCanvas canvas){
-		umlCanvas = canvas;
+	public UMLUnGroupMenuItem(){
 		this.setText("Ungroup");
 		this.addActionListener(new ActionListener(){
 

@@ -8,8 +8,8 @@ import shape.ClassObj;
 
 public class ClassObjMode extends UMLMode {
 
-	public ClassObjMode(UMLCanvas canvas) {
-		super(canvas);
+	public ClassObjMode() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 	@Override
@@ -24,7 +24,7 @@ public class ClassObjMode extends UMLMode {
 	}
 	private void addClassObj(int posX, int posY){
 		ClassObj newObj;
-		newObj = new ClassObj(posX, posY, this.canvas);
+		newObj = new ClassObj(posX, posY);
 		this.canvas.getObjList().add(newObj);
 	}
 }

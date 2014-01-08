@@ -16,17 +16,16 @@ public class UseCaseObj implements BasicObj {
 	private Port portLEFT;
 	private Port portRIGHT;
 	
-	private UMLCanvas umlCanvas;
+	private UMLCanvas umlCanvas = UMLCanvas.getInstance();
 	private int objWidth = 120;
 	private int objHeight = 80;
 	private String name = "Untitled";
 	private boolean selected = false;
 	
-	public UseCaseObj(int posX, int posY, UMLCanvas canvas){
+	public UseCaseObj(int posX, int posY){
 		this.posX = posX;
 		this.posY = posY;
 		setPorts();
-		umlCanvas = canvas;
 	}
 	public void setPorts() {
 		setPortUP(new Port(posX+objWidth/2, posY));

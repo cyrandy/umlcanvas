@@ -23,12 +23,11 @@ public class GroupObj implements BasicObj {
 	Port leftPort;
 	Port rightPort;
 		
-	UMLCanvas canvas;
+	UMLCanvas canvas = UMLCanvas.getInstance();
 	ArrayList<UMLObject> ObjectList = new ArrayList<UMLObject>();
 	
-	public GroupObj(UMLCanvas umlCanvas, ArrayList<UMLObject> objList) {
+	public GroupObj(ArrayList<UMLObject> objList) {
 		// TODO Auto-generated constructor stub
-		canvas = umlCanvas;
 		ObjectList = objList;
 		init();
 	}

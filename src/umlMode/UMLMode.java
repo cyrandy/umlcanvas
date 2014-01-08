@@ -11,8 +11,8 @@ import main.UMLCanvas;
 public class UMLMode implements MouseMotionListener, MouseListener{
 	protected UMLCanvas canvas;
 	
-	public UMLMode(UMLCanvas canvas) {
-		this.canvas = canvas;
+	public UMLMode() {
+		this.canvas = UMLCanvas.getInstance();
 	}
 	@Override
 	public void mouseDragged(MouseEvent e) {

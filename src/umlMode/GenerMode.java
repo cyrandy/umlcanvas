@@ -14,8 +14,8 @@ public class GenerMode extends UMLMode {
 	private boolean isFromObj = false ;
 	private boolean isToObj = false;
 	
-	public GenerMode(UMLCanvas canvas) {
-		super(canvas);
+	public GenerMode() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 	@Override

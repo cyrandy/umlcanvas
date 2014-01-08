@@ -9,10 +9,9 @@ import main.UMLCanvas;
 import shape.UMLObject;
 
 public class UMLRenameMenuItem extends JMenuItem {
-	private UMLCanvas umlCanvas;
+	private UMLCanvas umlCanvas = UMLCanvas.getInstance();
 	
-	public UMLRenameMenuItem(UMLCanvas canvas){
-		umlCanvas = canvas;
+	public UMLRenameMenuItem(){
 		this.setText("Rename");
 		this.addActionListener(new ActionListener(){
 

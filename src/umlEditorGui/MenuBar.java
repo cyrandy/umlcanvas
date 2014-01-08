@@ -13,24 +13,21 @@ import menuItem.UMLUnGroupMenuItem;
 
 
 public class MenuBar extends JMenuBar {
-	private UMLCanvas umlCanvas;
-	
-    JMenu menuF;
+	JMenu menuF;
     JMenu menuE;
     JMenuItem exitMenuItem;
     JMenuItem ungroupMenuItem;
     JMenuItem groupMenuItem;
     JMenuItem renameMenuItem;
 	
-	public MenuBar(UMLCanvas canvas){
-		umlCanvas = canvas;
+	public MenuBar(){
 	    menuF = new JMenu("File");
 	    menuE = new JMenu("Edit");
 	    
 	    exitMenuItem = new JMenuItem("exit");
-	    ungroupMenuItem = new UMLUnGroupMenuItem(umlCanvas);
-		groupMenuItem = new UMLGroupMenuItem(umlCanvas);
-		renameMenuItem = new UMLRenameMenuItem(umlCanvas);
+	    ungroupMenuItem = new UMLUnGroupMenuItem();
+		groupMenuItem = new UMLGroupMenuItem();
+		renameMenuItem = new UMLRenameMenuItem();
 	    
 	    exitMenuItem.addActionListener(new ActionListener(){
 			@Override

@@ -13,12 +13,13 @@ import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 import shape.UMLObject;
+import umlMode.SelectMode;
 import umlMode.UMLMode;
 
 
 public class UMLCanvas extends JPanel implements MouseListener, MouseMotionListener {
 	private static UMLCanvas instance = null;
-	private UMLMode currentMode;
+	private UMLMode currentMode = null;
 //	private UMLMouseListener mouseListener;
 	private ArrayList<UMLObject> objList = new ArrayList<UMLObject>();
 	
@@ -31,7 +32,6 @@ public class UMLCanvas extends JPanel implements MouseListener, MouseMotionListe
 	
 	private UMLCanvas() {
 		// TODO Auto-generated constructor stub
-		currentMode = new UMLMode(this);
 		addMouseMotionListener(this);
 		addMouseListener(this);
 	}
@@ -71,42 +71,42 @@ public class UMLCanvas extends JPanel implements MouseListener, MouseMotionListe
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		currentMode.mouseClicked(e);
+		if(currentMode != null)	currentMode.mouseClicked(e);
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
-		currentMode.mouseEntered(e);
+		if(currentMode != null)	currentMode.mouseEntered(e);
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
-		currentMode.mouseExited(e);
+		if(currentMode != null)	currentMode.mouseExited(e);
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		currentMode.mousePressed(e);
+		if(currentMode != null)	currentMode.mousePressed(e);
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
-		currentMode.mouseReleased(e);
+		if(currentMode != null)	currentMode.mouseReleased(e);
 	}
 
 	@Override
 	public void mouseDragged(MouseEvent e) {
 		// TODO Auto-generated method stub
-		currentMode.mouseDragged(e);
+		if(currentMode != null)	currentMode.mouseDragged(e);
 	}
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
 		// TODO Auto-generated method stub
-		currentMode.mouseMoved(e);
+		if(currentMode != null)	currentMode.mouseMoved(e);
 	}
 }

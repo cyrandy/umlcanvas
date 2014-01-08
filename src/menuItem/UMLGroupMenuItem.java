@@ -11,10 +11,9 @@ import shape.UMLObject;
 
 
 public class UMLGroupMenuItem extends JMenuItem {
-	private UMLCanvas umlCanvas;
+	private UMLCanvas umlCanvas = UMLCanvas.getInstance();
 	
-	public UMLGroupMenuItem(UMLCanvas canvas){
-		umlCanvas = canvas;
+	public UMLGroupMenuItem(){
 		this.setText("Group");
 		this.addActionListener(new ActionListener(){
 
@@ -27,7 +26,7 @@ public class UMLGroupMenuItem extends JMenuItem {
 					}
 				}
 				if( objList.size() > 0 ) {
-					GroupObj groupObj = new GroupObj(umlCanvas, objList);
+					GroupObj groupObj = new GroupObj(objList);
 					System.out.println(groupObj.getWidth()+","+groupObj.getHeight());
 					umlCanvas.getObjList().add(groupObj);
 					umlCanvas.repaint();

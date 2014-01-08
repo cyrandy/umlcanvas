@@ -36,7 +36,7 @@ public class Gui extends JFrame {
         ToolBar toolbar = ToolBar.getInstance();
         add(toolbar, BorderLayout.WEST);
         
-        MenuBar menuBar = new MenuBar(canvas);
+        MenuBar menuBar = new MenuBar();
         setJMenuBar(menuBar);
         
         //set JFrame

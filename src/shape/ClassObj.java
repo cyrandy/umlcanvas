@@ -16,17 +16,16 @@ public class ClassObj implements BasicObj{
 	private Port portLEFT;
 	private Port portRIGHT;
 	
-	private UMLCanvas umlCanvas;
+	private UMLCanvas umlCanvas = UMLCanvas.getInstance();
 	private int objWidth = 100;
 	private int objHeight = 120;
 	private String name = "Untitled";
 	private boolean selected = false;
 	
-	public ClassObj(int posX, int posY, UMLCanvas canvas){
+	public ClassObj(int posX, int posY){
 		this.posX = posX;
 		this.posY = posY;
 		setPorts();
-		umlCanvas = canvas;
 	}
 	
 	public void setPorts() {

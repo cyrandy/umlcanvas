@@ -37,12 +37,12 @@ public class ToolBar extends JToolBar {
 	
 	private ToolBar() {
 		// TODO Auto-generated constructor stub
-		selectBtn = new toolBtn(new ImageIcon("icon/1.png"), new SelectMode(canvas));
-		classBtn = new toolBtn(new ImageIcon("icon/5.png"),new ClassObjMode(canvas));
-		useCaseBtn = new toolBtn(new ImageIcon("icon/6.png"), new UseCaseMode(canvas));
-		assoBtn = new toolBtn(new ImageIcon("icon/2.png"), new AssoMode(canvas));
-		generBtn = new toolBtn(new ImageIcon("icon/3.png"), new GenerMode(canvas));
-		compoBtn = new toolBtn(new ImageIcon("icon/4.png"), new CompoMode(canvas));
+		selectBtn = new toolBtn(new ImageIcon("icon/1.png"), new SelectMode());
+		classBtn = new toolBtn(new ImageIcon("icon/5.png"),new ClassObjMode());
+		useCaseBtn = new toolBtn(new ImageIcon("icon/6.png"), new UseCaseMode());
+		assoBtn = new toolBtn(new ImageIcon("icon/2.png"), new AssoMode());
+		generBtn = new toolBtn(new ImageIcon("icon/3.png"), new GenerMode());
+		compoBtn = new toolBtn(new ImageIcon("icon/4.png"), new CompoMode());
 		
 		setAllToWhite();
 		

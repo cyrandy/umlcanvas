@@ -18,8 +18,8 @@ public class SelectMode extends UMLMode {
 	private boolean move_an_obj = false;
 	private UMLObject selectedObject = null;
 	
-	public SelectMode(UMLCanvas canvas) {
-		super(canvas);
+	public SelectMode() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 

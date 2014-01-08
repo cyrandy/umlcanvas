@@ -14,8 +14,8 @@ public class CompoMode extends UMLMode {
 	private boolean isFromObj = false ;
 	private boolean isToObj = false;
 	
-	public CompoMode(UMLCanvas canvas) {
-		super(canvas);
+	public CompoMode() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 	@Override

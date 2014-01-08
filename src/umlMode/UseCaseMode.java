@@ -9,8 +9,8 @@ import shape.UseCaseObj;
 
 public class UseCaseMode extends UMLMode {
 
-	public UseCaseMode(UMLCanvas canvas) {
-		super(canvas);
+	public UseCaseMode() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 	@Override
@@ -26,7 +26,7 @@ public class UseCaseMode extends UMLMode {
 	}
 	private void addNewUseCase(int x, int y) {
 		// TODO Auto-generated method stub
-		UseCaseObj newObj = new UseCaseObj(x, y, canvas);
+		UseCaseObj newObj = new UseCaseObj(x, y);
 		canvas.getObjList().add(newObj);
 	}
 }
