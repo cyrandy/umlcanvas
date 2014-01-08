@@ -21,7 +21,6 @@ public class UMLUnGroupMenuItem extends JMenuItem {
 				int i=0;
 				UMLObject tmpRemoveObj=null;
 				for(i=umlCanvas.getObjList().size()-1 ; i >= 0 ; i--) {
-					// to be modify - composite design pattern
 					if(umlCanvas.getObjList().get(i).isSelected()) {
 						tmpRemoveObj = umlCanvas.getObjList().get(i);
 						tmpRemoveObj.unGroup();

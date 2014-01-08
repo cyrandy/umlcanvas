@@ -21,7 +21,6 @@ import umlMode.UMLMode;
 public class UMLCanvas extends JPanel implements MouseListener, MouseMotionListener {
 	private static UMLCanvas instance = null;
 	private UMLMode currentMode = null;
-//	private UMLMouseListener mouseListener;
 	private ArrayList<UMLObject> objList = new ArrayList<UMLObject>();
 	
 	public static UMLCanvas getInstance(){
@@ -69,6 +68,11 @@ public class UMLCanvas extends JPanel implements MouseListener, MouseMotionListe
 		return false;
 	}
 
+	public void unGroup(GroupObj groupObj) {
+		// TODO Auto-generated method stub
+		objList.remove(groupObj);
+	}
+	
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
@@ -109,10 +113,5 @@ public class UMLCanvas extends JPanel implements MouseListener, MouseMotionListe
 	public void mouseMoved(MouseEvent e) {
 		// TODO Auto-generated method stub
 		if(currentMode != null)	currentMode.mouseMoved(e);
-	}
-
-	public void unGroup(GroupObj groupObj) {
-		// TODO Auto-generated method stub
-		objList.remove(groupObj);
 	}
 }
