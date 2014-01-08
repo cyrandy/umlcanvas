@@ -7,7 +7,7 @@ import java.util.List;
 import umlEditorGui.UMLCanvas;
 import main.Main;
 
-public class GroupObj implements BasicObj {
+public class GroupObj extends UMLObject {
 	
 	//GroupComponent attributes
 	int posX, posY; 
@@ -35,10 +35,10 @@ public class GroupObj implements BasicObj {
 	public void init() {
 		int mostLeft, mostRight, mostUp, mostDown;
 		//initialize the variable
-		mostLeft = ((BasicObj)ObjectList.get(1)).getPortLEFT().getPosX();
-		mostRight = ((BasicObj)ObjectList.get(1)).getPortRIGHT().getPosX();
-		mostDown = ((BasicObj)ObjectList.get(1)).getPortDOWN().getPosY();
-		mostUp = ((BasicObj)ObjectList.get(1)).getPortUP().getPosY();
+		mostLeft = ((UMLObject)ObjectList.get(1)).getPortLEFT().getPosX();
+		mostRight = ((UMLObject)ObjectList.get(1)).getPortRIGHT().getPosX();
+		mostDown = ((UMLObject)ObjectList.get(1)).getPortDOWN().getPosY();
+		mostUp = ((UMLObject)ObjectList.get(1)).getPortUP().getPosY();
 		for(UMLObject basicObj : ObjectList){
 			int left = basicObj.getPortLEFT().getPosX();
 			if(left < mostLeft){

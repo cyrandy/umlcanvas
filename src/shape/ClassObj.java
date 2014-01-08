@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import umlEditorGui.UMLCanvas;
 import main.Main;
 
-public class ClassObj implements BasicObj{
+public class ClassObj extends UMLObject{
 	private int posX;
 	private int posY;
 	private Port portUP;

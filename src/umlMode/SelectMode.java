@@ -36,7 +36,6 @@ public class SelectMode extends UMLMode {
 			}
 			else {
 				multi_select_mode = true;
-				
 			}
 //			System.out.println("pressed"+e.getX()+","+e.getY());
 			

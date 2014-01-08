@@ -8,7 +8,7 @@ import umlEditorGui.UMLCanvas;
 import main.Main;
 
 
-public class UseCaseObj implements BasicObj {
+public class UseCaseObj extends UMLObject {
 	private int posX;
 	private int posY;
 	private Port portUP;

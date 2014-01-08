@@ -4,7 +4,7 @@ import java.awt.Graphics2D;
 import java.util.ArrayList;
 
 
-public class AssociationLine implements UMLObject {
+public class AssociationLine extends UMLObject {
 	protected UMLObject startObject;
 	protected UMLObject endObject;
 	protected int startX;
