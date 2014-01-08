@@ -4,6 +4,7 @@ package umlMode;
 import java.awt.event.MouseEvent;
 
 import shape.AssociationLine;
+import shape.ShapeObj;
 import shape.UMLObject;
 import umlEditorGui.UMLCanvas;
 
@@ -45,13 +46,13 @@ public class AssoMode extends UMLMode {
 			}
 			if( isFromObj && isToObj ){
 				System.out.println("add line");
-				addAssoLine(startObject, endObject);
+				addAssoLine((ShapeObj)startObject, (ShapeObj)endObject);
 			}
 		}
 		isFromObj = false;
 		isToObj = false;
 	}
-	private void addAssoLine(UMLObject startObject, UMLObject endObject) {
+	private void addAssoLine(ShapeObj startObject, ShapeObj endObject) {
 		AssociationLine ass = new AssociationLine(startObject, endObject);
 		canvas.getObjList().add(ass);
 		canvas.repaint();

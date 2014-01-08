@@ -91,7 +91,7 @@ public class SelectMode extends UMLMode {
 		for(i=canvas.getObjList().size()-1 ; i >= 0 ; i-- ) {
 			if (canvas.getObjList().get(i).isInObjRange(x, y)){
 				selectedObj = canvas.getObjList().get(i);
-				System.out.println("get:"+selectedObj.getWidth()+","+selectedObj.getHeight());
+//				System.out.println("get:"+selectedObj.getWidth()+","+selectedObj.getHeight());
 				break;
 			}
 		}

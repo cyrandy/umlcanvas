@@ -3,6 +3,7 @@ package umlMode;
 
 import java.awt.event.MouseEvent;
 
+import shape.ShapeObj;
 import shape.CompoLine;
 import shape.UMLObject;
 import umlEditorGui.UMLCanvas;
@@ -45,13 +46,13 @@ public class CompoMode extends UMLMode {
 			}
 			if( isFromObj && isToObj ){
 				System.out.println("add line");
-				addCompoLine(startObject, endObject);
+				addCompoLine((ShapeObj)startObject, (ShapeObj)endObject);
 			}
 		}
 		isFromObj = false;
 		isToObj = false;
 	}
-	private void addCompoLine(UMLObject startObject, UMLObject endObject) {
+	private void addCompoLine(ShapeObj startObject, ShapeObj endObject) {
 		CompoLine compo = new CompoLine(startObject, endObject);
 		canvas.getObjList().add(compo);
 		canvas.repaint();

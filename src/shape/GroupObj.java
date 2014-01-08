@@ -7,22 +7,13 @@ import java.util.List;
 import umlEditorGui.UMLCanvas;
 import main.Main;
 
-public class GroupObj extends UMLObject {
+public class GroupObj extends BasicObject {
 	
-	//GroupComponent attributes
 	int posX, posY; 
-	//int posXInit, posYInit;
 	int width, height;
-	//GroupComponent attributes
-	String name = "Untitled Group";
 		
 	boolean selected = false;
-		
-	Port upPort;
-	Port downPort;
-	Port leftPort;
-	Port rightPort;
-		
+
 	UMLCanvas canvas = UMLCanvas.getInstance();
 	ArrayList<UMLObject> ObjectList = new ArrayList<UMLObject>();
 	
@@ -35,32 +26,32 @@ public class GroupObj extends UMLObject {
 	public void init() {
 		int mostLeft, mostRight, mostUp, mostDown;
 		//initialize the variable
-		mostLeft = ((UMLObject)ObjectList.get(1)).getPortLEFT().getPosX();
-		mostRight = ((UMLObject)ObjectList.get(1)).getPortRIGHT().getPosX();
-		mostDown = ((UMLObject)ObjectList.get(1)).getPortDOWN().getPosY();
-		mostUp = ((UMLObject)ObjectList.get(1)).getPortUP().getPosY();
+		mostLeft = ((BasicObject)ObjectList.get(1)).getPortLEFT().getPosX();
+		mostRight = ((BasicObject)ObjectList.get(1)).getPortRIGHT().getPosX();
+		mostDown = ((BasicObject)ObjectList.get(1)).getPortDOWN().getPosY();
+		mostUp = ((BasicObject)ObjectList.get(1)).getPortUP().getPosY();
 		for(UMLObject basicObj : ObjectList){
-			int left = basicObj.getPortLEFT().getPosX();
+			int left = ((BasicObject)basicObj).getPortLEFT().getPosX();
 			if(left < mostLeft){
 				mostLeft = left;
 			}
-			int right = basicObj.getPortRIGHT().getPosX();
+			int right = ((BasicObject)basicObj).getPortRIGHT().getPosX();
 			if(right > mostRight){
 				mostRight = right;
 			}
-			int down = basicObj.getPortDOWN().getPosY();
+			int down = ((BasicObject)basicObj).getPortDOWN().getPosY();
 			if(down > mostDown){
 				mostDown = down;
 			}
-			int up = basicObj.getPortUP().getPosY();
+			int up = ((BasicObject)basicObj).getPortUP().getPosY();
 			if(up < mostUp){
 				mostUp = up;
 			}
 		}
-		upPort = new Port((mostLeft + mostRight)/2,mostUp);
-		leftPort = new Port(mostLeft, (mostDown + mostUp)/2);
-		rightPort = new Port(mostRight, (mostDown + mostUp)/2);
-		downPort = new Port((mostLeft + mostRight)/2, mostDown);
+		portUP = new Port((mostLeft + mostRight)/2,mostUp);
+		portLEFT = new Port(mostLeft, (mostDown + mostUp)/2);
+		portRIGHT = new Port(mostRight, (mostDown + mostUp)/2);
+		portDOWN = new Port((mostLeft + mostRight)/2, mostDown);
 		
 		width = mostRight - mostLeft;
 		height = mostDown - mostUp;
@@ -68,58 +59,22 @@ public class GroupObj extends UMLObject {
 		posX = mostLeft;
 		posY = mostUp;
 	}
-	
-	@Override
-	public void drawObjShape(Graphics g) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public int getPosX() {
-		// TODO Auto-generated method stub
 		return posX;
 	}
 
 	@Override
 	public int getPosY() {
-		// TODO Auto-generated method stub
 		return posY;
 	}
 
-	@Override
-	public Port getPortUP() {
-		// TODO Auto-generated method stub
-		return upPort;
-	}
-
-	@Override
-	public Port getPortDOWN() {
-		// TODO Auto-generated method stub
-		return downPort;
-	}
-
-	@Override
-	public Port getPortRIGHT() {
-		// TODO Auto-generated method stub
-		return rightPort;
-	}
-
-	@Override
-	public Port getPortLEFT() {
-		// TODO Auto-generated method stub
-		return leftPort;
-	}
-
-	@Override
 	public int getWidth() {
-		// TODO Auto-generated method stub
 		return width;
 	}
 
-	@Override
 	public int getHeight() {
-		// TODO Auto-generated method stub
 		return height;
 	}
 
@@ -144,7 +99,6 @@ public class GroupObj extends UMLObject {
 
 	@Override
 	public boolean isInObjRange(int x, int y) {
-		// TODO Auto-generated method stub
 		if ( (x >= getPosX() && x <= getPosX()+getWidth()) && (y >= getPosY() && y <= getPosY()+getHeight())){
 			return true;
 		}
@@ -153,7 +107,6 @@ public class GroupObj extends UMLObject {
 
 	@Override
 	public boolean isInObjRange(int x1, int y1, int x2, int y2) {
-		// TODO Auto-generated method stub
 		if ( Main.isBetween(x1, getPosX(), x2) && Main.isBetween(y1, getPosY(), y2) ) {
 			return true;
 		}
@@ -162,7 +115,6 @@ public class GroupObj extends UMLObject {
 	
 	@Override
 	public void setSelectMode(boolean m) {
-		// TODO Auto-generated method stub
 		for (UMLObject obj : ObjectList) {
 			obj.setSelectMode(m);
 		}
@@ -171,19 +123,11 @@ public class GroupObj extends UMLObject {
 
 	@Override
 	public boolean isSelected() {
-		// TODO Auto-generated method stub
 		return selected;
 	}
 
 	@Override
-	public void setName(String newName) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public ArrayList<UMLObject> getObjectList() {
-		// TODO Auto-generated method stub
 		return ObjectList;
 	}
 	

@@ -5,7 +5,7 @@ import java.awt.Graphics2D;
 
 public class CompoLine extends AssociationLine {
 
-	public CompoLine(UMLObject start, UMLObject end) {
+	public CompoLine(ShapeObj start, ShapeObj end) {
 		super(start, end);
 		// TODO Auto-generated constructor stub
 	}

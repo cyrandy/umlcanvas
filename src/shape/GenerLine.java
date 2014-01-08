@@ -5,7 +5,7 @@ import java.awt.Graphics2D;
 
 public class GenerLine extends AssociationLine {
 
-	public GenerLine(UMLObject start, UMLObject end) {
+	public GenerLine(ShapeObj start, ShapeObj end) {
 		super(start, end);
 		// TODO Auto-generated constructor stub
 	}
