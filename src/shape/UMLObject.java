@@ -1,6 +1,5 @@
 package shape;
 import java.awt.Graphics;
-import java.util.ArrayList;
 
 
 public class UMLObject {

@@ -2,11 +2,6 @@ package shape;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.util.ArrayList;
-
-import umlEditorGui.UMLCanvas;
-import main.Main;
-
 
 public class UseCaseObj extends ShapeObj {
 	public UseCaseObj(int posX, int posY){

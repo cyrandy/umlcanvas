@@ -1,12 +1,7 @@
 package shape;
-import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.util.ArrayList;
-
-import umlEditorGui.UMLCanvas;
-import main.Main;
 
 public class ClassObj extends ShapeObj{
 	
@@ -18,7 +13,6 @@ public class ClassObj extends ShapeObj{
 		setPorts();
 	}
 	public void drawObjShape(Graphics g) {
-		// TODO Auto-generated method stub
 		Graphics2D g2d = (Graphics2D) g;
 		
 		ClassObj obj = ClassObj.this;

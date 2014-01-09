@@ -12,7 +12,6 @@ import umlMode.UMLMode;
 
 public class toolBtn extends JButton {
 	private UMLMode mode;
-	private UMLCanvas canvas = UMLCanvas.getInstance();
 	
 	public toolBtn(ImageIcon imageIcon, UMLMode mode){
 		this.mode = mode;

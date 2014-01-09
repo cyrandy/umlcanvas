@@ -5,8 +5,6 @@ import java.awt.event.MouseEvent;
 
 import shape.ShapeObj;
 import shape.GenerLine;
-import shape.UMLObject;
-import umlEditorGui.UMLCanvas;
 
 
 public class GenerMode extends CreateLineObjMode {

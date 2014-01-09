@@ -5,8 +5,6 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 import shape.UMLObject;
-import umlEditorGui.UMLCanvas;
-
 
 public class SelectMode extends UMLMode {
 	private int start_point_X;
@@ -15,7 +13,6 @@ public class SelectMode extends UMLMode {
 	private int end_point_Y;
 	private boolean multi_select_mode=false;
 	private boolean select_an_obj = false;
-	private boolean move_an_obj = false;
 	private UMLObject selectedObject = null;
 	
 	public SelectMode() {
@@ -40,7 +37,6 @@ public class SelectMode extends UMLMode {
 	}
 	public void mouseDragged(MouseEvent e) {
 		if (select_an_obj) {
-			move_an_obj = true;
 			System.out.println("move it!");
 			selectedObject.setPosX(selectedObject.getPosX()+(e.getX()-start_point_X));
 			selectedObject.setPosY(selectedObject.getPosY()+(e.getY()-start_point_Y));

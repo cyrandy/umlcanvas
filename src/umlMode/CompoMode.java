@@ -5,8 +5,6 @@ import java.awt.event.MouseEvent;
 
 import shape.ShapeObj;
 import shape.CompoLine;
-import shape.UMLObject;
-import umlEditorGui.UMLCanvas;
 
 
 public class CompoMode extends CreateLineObjMode {

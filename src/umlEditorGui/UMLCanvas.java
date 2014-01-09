@@ -1,7 +1,5 @@
 package umlEditorGui;
 
-import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
@@ -9,12 +7,10 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 
-import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 import shape.GroupObj;
 import shape.UMLObject;
-import umlMode.SelectMode;
 import umlMode.UMLMode;
 
 

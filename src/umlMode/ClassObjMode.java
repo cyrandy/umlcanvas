@@ -3,7 +3,6 @@ package umlMode;
 import java.awt.event.MouseEvent;
 
 import shape.ClassObj;
-import umlEditorGui.UMLCanvas;
 
 
 public class ClassObjMode extends CreateObjMode {

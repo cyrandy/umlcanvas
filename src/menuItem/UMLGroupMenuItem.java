@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import javax.swing.JMenuItem;
 
 import shape.GroupObj;
-import shape.ShapeObj;
 import shape.UMLObject;
 import umlEditorGui.UMLCanvas;
 

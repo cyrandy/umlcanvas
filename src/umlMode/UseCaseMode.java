@@ -4,8 +4,6 @@ package umlMode;
 import java.awt.event.MouseEvent;
 
 import shape.UseCaseObj;
-import umlEditorGui.UMLCanvas;
-
 
 public class UseCaseMode extends CreateObjMode {
 

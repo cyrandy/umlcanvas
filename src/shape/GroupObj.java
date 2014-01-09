@@ -1,12 +1,8 @@
 package shape;
 
-import java.awt.Graphics;
-import java.awt.geom.FlatteningPathIterator;
 import java.util.ArrayList;
-import java.util.List;
 
 import umlEditorGui.UMLCanvas;
-import main.Main;
 
 public class GroupObj extends UMLObject {
 	UMLCanvas canvas = UMLCanvas.getInstance();

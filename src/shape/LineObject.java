@@ -43,8 +43,8 @@ public class LineObject extends UMLObject{
 				endPort = endObject.getPortRIGHT();
 			}
 			else {
-				startPort = endObject.getPortLEFT();
-				endPort = startObject.getPortRIGHT();
+				startPort = startObject.getPortRIGHT();
+				endPort = endObject.getPortLEFT();
 			}
 		}
 		else {
@@ -53,8 +53,8 @@ public class LineObject extends UMLObject{
 				endPort = endObject.getPortDOWN();
 			}
 			else {
-				startPort = endObject.getPortUP();
-				endPort = startObject.getPortDOWN();
+				startPort = startObject.getPortDOWN();
+				endPort = endObject.getPortUP();
 			}
 		}
 	}
