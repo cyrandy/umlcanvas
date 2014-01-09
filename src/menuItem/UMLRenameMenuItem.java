@@ -14,10 +14,8 @@ public class UMLRenameMenuItem extends JMenuItem {
 	public UMLRenameMenuItem(){
 		this.setText("Rename");
 		this.addActionListener(new ActionListener(){
-
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
 				if(umlCanvas.isAnyObjSelected()){
 					String newName = JOptionPane.showInputDialog("Please type in new name");
 					for(UMLObject obj : umlCanvas.getObjList()){

@@ -7,26 +7,15 @@ import shape.UseCaseObj;
 import umlEditorGui.UMLCanvas;
 
 
-public class UseCaseMode extends UMLMode {
+public class UseCaseMode extends CreateObjMode {
 
 	public UseCaseMode() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public void mouseClicked(MouseEvent e) {
-//		super.mouseClicked(e);
-		// (left click mouse)
 		if (e.getButton() == MouseEvent.BUTTON1) {
-			//add a class unit while click a button
-//			System.out.println("add use case obj");
-			addNewUseCase(e.getX(),e.getY());
-			canvas.repaint();
+			addObj(new UseCaseObj(e.getX(),e.getY()));
 		}
-	}
-	private void addNewUseCase(int x, int y) {
-		// TODO Auto-generated method stub
-		UseCaseObj newObj = new UseCaseObj(x, y);
-		canvas.getObjList().add(newObj);
 	}
 }

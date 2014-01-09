@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import javax.swing.JMenuItem;
 
 import shape.GroupObj;
+import shape.ShapeObj;
 import shape.UMLObject;
 import umlEditorGui.UMLCanvas;
 
@@ -26,7 +27,6 @@ public class UMLGroupMenuItem extends JMenuItem {
 					}
 				}
 				if( objList.size() > 0 ) {
-					System.out.println("qq");
 					GroupObj groupObj = new GroupObj(objList);
 					umlCanvas.getObjList().add(groupObj);
 					umlCanvas.repaint();

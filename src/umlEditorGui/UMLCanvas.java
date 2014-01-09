@@ -51,10 +51,6 @@ public class UMLCanvas extends JPanel implements MouseListener, MouseMotionListe
 		currentMode = newMode;
 	}
 	
-	public String getMode() {
-		return currentMode.getClass().getName();
-	}
-	
 	public ArrayList<UMLObject> getObjList() {
 		return objList;
 	}

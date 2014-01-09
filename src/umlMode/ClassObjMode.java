@@ -6,25 +6,15 @@ import shape.ClassObj;
 import umlEditorGui.UMLCanvas;
 
 
-public class ClassObjMode extends UMLMode {
+public class ClassObjMode extends CreateObjMode {
 
 	public ClassObjMode() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public void mouseClicked(MouseEvent e) {
-//		super.mouseClicked(e);
-		// (left click mouse)
 		if (e.getButton() == MouseEvent.BUTTON1) {
-			//add a class unit while click a button
-			addClassObj(e.getX(), e.getY());
-			canvas.repaint();
+			addObj(new ClassObj(e.getX(), e.getY()));
 		}
-	}
-	private void addClassObj(int posX, int posY){
-		ClassObj newObj;
-		newObj = new ClassObj(posX, posY);
-		this.canvas.getObjList().add(newObj);
 	}
 }

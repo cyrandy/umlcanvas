@@ -17,9 +17,6 @@ public class UMLObject {
 	public boolean isInObjRange(int x1, int y1, int x2, int y2) {
 		return false;
 	}
-	public ArrayList<UMLObject> getObjectList() {
-		return null;
-	}
 	public void unGroup(){
 	}
 	public void setName(String newName){

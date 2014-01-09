@@ -8,10 +8,7 @@ import java.util.List;
 import umlEditorGui.UMLCanvas;
 import main.Main;
 
-public class GroupObj extends BasicObject {
-	
-	boolean selected = false;
-
+public class GroupObj extends UMLObject {
 	UMLCanvas canvas = UMLCanvas.getInstance();
 	ArrayList<UMLObject> ObjectList = new ArrayList<UMLObject>();
 	
@@ -19,21 +16,20 @@ public class GroupObj extends BasicObject {
 		ObjectList = objList;
 	}
 	
-
 	@Override
 	public void setPosX(int x) {
 		for (UMLObject obj : ObjectList ) {
-			obj.setPosX(obj.getPosX()+x-this.getPosX());
+			obj.setPosX(obj.getPosX()+x);
 		}
 	}
-
+	
 	@Override
 	public void setPosY(int y) {
 		for (UMLObject obj : ObjectList ) {
-			obj.setPosY(obj.getPosY()+y-this.getPosY());
+			obj.setPosY(obj.getPosY()+y);
 		}
 	}
-
+	
 	@Override
 	public boolean isInObjRange(int x, int y) {
 		for (UMLObject object : ObjectList ) {
@@ -55,15 +51,16 @@ public class GroupObj extends BasicObject {
 		for (UMLObject obj : ObjectList) {
 			obj.setSelectMode(m);
 		}
-		selected = true;
 	}
 
 	@Override
 	public boolean isSelected() {
-		return selected;
+		for (UMLObject object : ObjectList) {
+			if (object.isSelected()) return true;
+		}
+		return false;
 	}
 
-	@Override
 	public ArrayList<UMLObject> getObjectList() {
 		return ObjectList;
 	}

@@ -20,7 +20,6 @@ public class SelectMode extends UMLMode {
 	
 	public SelectMode() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public void mousePressed(MouseEvent e) {
@@ -37,8 +36,6 @@ public class SelectMode extends UMLMode {
 			else {
 				multi_select_mode = true;
 			}
-//			System.out.println("pressed"+e.getX()+","+e.getY());
-			
 		}
 	}
 	public void mouseDragged(MouseEvent e) {
@@ -73,7 +70,6 @@ public class SelectMode extends UMLMode {
 				object.setSelectMode(true);
 				selectedObjects.add(object);
 			}
-			
 		}
 		return selectedObjects;
 	}
@@ -85,13 +81,11 @@ public class SelectMode extends UMLMode {
 		canvas.repaint();
 	}
 	private UMLObject getSelectedObj(int x, int y) {
-		// TODO Auto-generated method stub
 		UMLObject selectedObj = null;
 		int i=0;
 		for(i=canvas.getObjList().size()-1 ; i >= 0 ; i-- ) {
 			if (canvas.getObjList().get(i).isInObjRange(x, y)){
 				selectedObj = canvas.getObjList().get(i);
-//				System.out.println("get:"+selectedObj.getWidth()+","+selectedObj.getHeight());
 				break;
 			}
 		}

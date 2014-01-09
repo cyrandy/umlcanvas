@@ -3,11 +3,10 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 
 
-public class GenerLine extends AssociationLine {
+public class GenerLine extends LineObject {
 
 	public GenerLine(ShapeObj start, ShapeObj end) {
 		super(start, end);
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Override

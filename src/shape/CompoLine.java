@@ -3,11 +3,10 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 
 
-public class CompoLine extends AssociationLine {
+public class CompoLine extends LineObject {
 
 	public CompoLine(ShapeObj start, ShapeObj end) {
 		super(start, end);
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
