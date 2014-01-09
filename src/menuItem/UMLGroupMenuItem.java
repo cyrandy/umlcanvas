@@ -28,7 +28,6 @@ public class UMLGroupMenuItem extends JMenuItem {
 				if( objList.size() > 0 ) {
 					System.out.println("qq");
 					GroupObj groupObj = new GroupObj(objList);
-					System.out.println(groupObj.getWidth()+","+groupObj.getHeight());
 					umlCanvas.getObjList().add(groupObj);
 					umlCanvas.repaint();
 				}
